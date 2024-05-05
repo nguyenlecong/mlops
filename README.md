@@ -12,3 +12,7 @@
   - Deployment: Many options and no standards
     
 -> **mlflow** sinh ra để giải quyết các khó khăn này
+
+![mlops1](https://src.n-ix.com/uploads/2022/11/10/e48d5a1f-7a4f-4a9d-a704-5af7ff27e131.png)
+
+![mlops](https://www.ml4devs.com/images/illustrations/ml-lifecycle-mlops-eternal-knot.png)
