@@ -10,4 +10,5 @@
   - Tracking: model and model metrics
   - Reproducibility: Platforms, environments and workspaces
   - Deployment: Many options and no standards
+    
 -> **mlflow** sinh ra để giải quyết các khó khăn này
