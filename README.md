@@ -15,6 +15,9 @@
     - Store and version ML models
     - Load and deploy ML models
 - **mlflow UI:** `mlflow ui`
+
+![mlflow1](https://user-images.githubusercontent.com/26833433/274929143-05e37e72-c355-44be-a842-b358592340b7.png)
+
 ---
 - **mlflow and kubeflow:**
 
