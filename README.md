@@ -14,6 +14,7 @@
   - **mlflow model registry:**
     - Store and version ML models
     - Load and deploy ML models
+- **mlflow UI:** `mlflow ui`
 ---
 - **mlflow and kubeflow:**
 
