@@ -22,3 +22,14 @@
 |dự án mã nguồn mở được tạo ra bởi Databrricks, những người tạo ra Spark|tạo ra bởi google năm 2018, dựa trên **k8s**|
 |tập trung nhiều hơn vào việc theo dõi thí nghiệm|tập trung vào điều phối và quản lý pipeline|
 |experiment tracking, model versioning/deployment|make it easy to develop, deploy, manage portable, scalable ml workflows|
+
+---
+- **Notes:**
+  - **Tạo môi trường ảo:**
+    - Dễ quản lý packages, nhiều projects
+    - miniconda, virtualenv, pyenv, venv
+    - **venv python package (Windows):**
+      - create: `python -m venv mlops`
+      - activate: `.\mlops\Scripts\activate`
+      - deactivate: `deactivate`
+      - nhược điểm: các môi trường cùng python version
