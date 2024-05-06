@@ -1,0 +1,5 @@
+.vscode
+.pycache
+.history
+experiment_tracking
+mlops
