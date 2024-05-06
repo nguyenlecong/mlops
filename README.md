@@ -1,1 +1,69 @@
-# mlops
+# airflow[^1]
+- A platform to programatically author, schedule and monitor workflows
+- Created by **Airbnb**, written by python, is a workflow management system, open-source, no cost, "**configuration as code**" principal
+![airflow1](https://2679069.fs1.hubspotusercontent-na1.net/hubfs/2679069/Copy%20of%20dimension%20site%20%20%2816%29.jpg)
+---
+- We are facing with a lots of workflows and a lots of disvantages with current methods:
+  - **No notification** when finish/fail/retry
+  - **No status monitoring** for running script
+  - **No flexible integration** mechanism
+  - **No dependencies** management
+  - **No version controll** for workflow's script
+  - **No failure-retry and re-run** mechanism
+  - **No centralize logging** mechanism
+  - **No backfill** mechanism
+  - **No scalability**
+    
+-> Airflow comes into the picture
+---
+- Airflow is **used for**:
+  - Run ETL (extract-transform-load) pipelines
+  - Data ingestion pipelines
+  - ML pipelines
+  - Predictive data pipelines
+- We need to know **some concepts**:
+  - **DAG:**
+    - Directed Acyclic Graph - Đồ thị có hướng không vòng
+    - A DAG can run **manually** or **automatically**
+    - A DAG can be **scheduled in the future**
+    - A DAG can run **periodically**
+  - **Task:**
+    - Operators:
+      - An Operator is conceptually a template for a predefined Task
+      - **Builtin:**
+        - **BashOperator** - excutes a bash command
+        - **PythonOperator** - calls an arbitrary Python function
+        - **EmailOperator** - sends an email
+      - **Provider Packages:**
+        - MySqlOperator
+        - PostgresOperator
+        - MsSqlOperator
+        - OracleOperator
+        - KubernetesPodOperator
+        - ...
+    - **Sensors:**
+      - Sensors are a special type of Operator that are designed to do exactly one thing - wait for something to occur
+      - **FileSensor** - waits for a file or folder to land in a filesystem
+      - **S3KeySensor** - waits for a key to be present in a S3 bucket
+      - **SqlSenor** - runs a sql statement repeatedly until a criteria is met
+      - **ExternalTaskSensor** - waits for a different DAG or a task in a different DAG to complete for a specific execution date
+      - **DateTimeSensor** - waits until specified datetime (Useful to add some delay to your DAGs)
+      - **TimeDeltaSensor** - waits for a timedelta after the task's execution_date + schedule interval (Looks similar to the previous one no?)
+    - **Taskflow**
+- **Architecture:**
+  - **Metadata Database** to store system data
+  - **DAG Directory** to store DAG files
+  - **Webserver** to monitor executors
+  - **Scheduler** engine to fire executors
+  - **Executor** execute DAGs
+    - **Local:**
+      - **Debug Executor** - debug tool and can be used from IDE
+      - **Local Executor** - runs tasks by spawning processes in a controlled fashion in different modes
+      - **Sequential Executor** - run one task instance at a time (for testing purpose)
+    - **Remote:**
+      - **Celery Executor**
+      - **Kubernetes Executor**
+      - ...
+![airflow-architecture](https://airflow.apache.org/docs/apache-airflow/2.0.1/_images/arch-diag-basic.png)
+
+[^1]: [Thử dùng Airflow để crawl dữ liệu, train model hoàn toàn tự động]([https://viblo.asia/p/huong-dan-co-ban-framework-fastapi-tu-a-z-phan-1-V3m5W0oyKO7](https://www.youtube.com/watch?v=LtInPTXfdb8))
