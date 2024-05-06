@@ -1,4 +1,4 @@
-# mlflow
+# mlflow[^1]
 ---
 - **mlflow** is an open-source platform and a great tool for managing the end-to-enf machine learning cycle
 - **mlflow components:**
@@ -37,3 +37,5 @@
       - activate: `.\mlops\Scripts\activate`
       - deactivate: `deactivate`
       - nhược điểm: các môi trường cùng python version
+
+[^1]: [MLflow tutorials](https://www.youtube.com/watch?v=sO5NcaARq3g&list=PL3agzT1ufOwMuUKmXRmH0f_fCXaAuUW2M&index=1)
